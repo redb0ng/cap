@@ -11,7 +11,8 @@ export class ValidateService {
       user.name == undefined ||
       user.email == undefined ||
       user.username == undefined ||
-      user.password == undefined
+      user.password == undefined ||
+      user.phone == undefined
     ) {
       return false;
     } else {
