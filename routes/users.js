@@ -13,6 +13,7 @@ router.post("/register", (req, res, next) => {
     email: req.body.email,
     username: req.body.username,
     password: req.body.password,
+    phone: req.body.phone,
   });
 
   User.getUserByUsername(newUser.username, (err, user) => {
