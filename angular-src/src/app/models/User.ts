@@ -4,6 +4,7 @@ export interface User {
   email: string;
   username: string;
   password: string;
+  phone: string;
 }
 
 // 로그인시 서버에 보내는 정보의 데이터 모델
@@ -19,4 +20,5 @@ export interface UserNoPW {
   name: string;
   email: string;
   username: string;
+  phone: string;
 }
