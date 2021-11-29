@@ -24,6 +24,10 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  cert: {
+    type: String,
+    required: false,
+  },
 });
 
 const User = mongoose.model("User", UserSchema);
@@ -52,6 +56,23 @@ User.comparePassword = function (candidatePassword, hash, callback) {
     if (err) throw err;
     callback(null, isMatch);
   });
+};
+
+// 사용자 리스트 응답
+User.getAll = function (callback) {
+  User.find(callback);
+};
+
+// Update user's certificate
+User.saveCert = function (username, cert, callback) {
+  const query = { username: username };
+  const update = { cert: cert };
+  User.findOneAndUpdate(
+    query,
+    update,
+    { new: true, useFindAndModify: false },
+    callback
+  );
 };
 
 module.exports = User;

@@ -22,3 +22,14 @@ export interface UserNoPW {
   username: string;
   phone: string;
 }
+
+// 인증서 발급 요청
+export interface CertReq {
+  country: string;
+  state: string;
+  locality: string;
+  organization: string;
+  orgUnit: string;
+  common: string;
+  publicKey: string;
+}

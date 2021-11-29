@@ -11,11 +11,18 @@ export class DashboardComponent implements OnInit {
   userNoPW: UserNoPW;
   name: string;
   token: any;
+  privateKey: any;
+  cert: any;
+  caCert: any;
+
   constructor() {}
   ngOnInit(): void {
     this.userString = localStorage.getItem('userNoPW');
     this.userNoPW = JSON.parse(this.userString);
     this.name = this.userNoPW.name;
     this.token = localStorage.getItem('authToken');
+    this.privateKey = localStorage.getItem('privateKey');
+    this.cert = localStorage.getItem('cert');
+    this.caCert = localStorage.getItem('caCert');
   }
 }

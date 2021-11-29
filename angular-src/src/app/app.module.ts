@@ -20,6 +20,11 @@ import {
 import { AuthService } from './services/auth.service';
 import { JwtModule } from '@auth0/angular-jwt';
 import { AuthGuard } from './guards/auth.guard';
+import { ListComponent } from './components/list/list.component';
+import { CertComponent } from './components/cert/cert.component';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { QrgenComponent } from './components/qrgen/qrgen.component';
+import { QrloginComponent } from './components/qrlogin/qrlogin.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,10 @@ import { AuthGuard } from './guards/auth.guard';
     HomeComponent,
     DashboardComponent,
     ProfileComponent,
+    ListComponent,
+    CertComponent,
+    QrgenComponent,
+    QrloginComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +46,7 @@ import { AuthGuard } from './guards/auth.guard';
     FormsModule,
     FlashMessagesModule,
     HttpClientModule,
+    NgxQRCodeModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: () => {
