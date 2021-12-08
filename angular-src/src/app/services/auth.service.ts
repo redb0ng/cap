@@ -53,7 +53,7 @@ export class AuthService {
   logout() {
     localStorage.removeItem('authToken');
     localStorage.removeItem('userNoPW');
-    // localStorage.clear();
+    //localStorage.clear();
   }
 
   getProfile(): Observable<any> {

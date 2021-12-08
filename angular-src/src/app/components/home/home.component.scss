@@ -1,0 +1,30 @@
+#container {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.col {
+  color: #16992c;
+}
+
+.card-body {
+  background-color: #2c2b2b;
+}
+
+#card1 {
+  //background-color: black;
+  background-image: url("github.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#card2 {
+  background-image: url("instar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration-line: none;
+  color: #ffffff;
+}
